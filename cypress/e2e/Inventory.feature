@@ -5,6 +5,6 @@ Feature: Inventory - SauceDemo
 
     Scenario: Adding Inventory to my shopping cart
         When I click on the product "Sauce Labs Backpack"
-# And I add it to my shopping cart
-# When I click on the shopping cart
-# Then I should see "Sauce Labs Backpack" in my shopping cart
+        And I add it to my shopping cart
+        And I click on the shopping cart
+        Then I should see "Sauce Labs Backpack" in my shopping cart

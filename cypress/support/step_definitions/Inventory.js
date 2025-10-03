@@ -12,3 +12,16 @@ Given('I am logged in as {string} with password {string}', (username, password) 
 When('I click on the product {string}', (product) => {
   cy.get('[data-test="inventory-item-name"]').contains(product).click();
 })
+
+When('I add it to my shopping cart', () => {
+  cy.get('[data-test="add-to-cart"]').click();
+})
+
+
+When('I click on the shopping cart', () => {
+  cy.get('[data-test="shopping-cart-link"]').click();
+})
+
+Then('I should see {string} in my shopping cart', (product) => {
+  cy.get('[data-test="inventory-item"]').contains(product).should('be.visible');
+})
