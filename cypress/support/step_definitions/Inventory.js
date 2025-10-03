@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { Given } from "@badeball/cypress-cucumber-preprocessor";
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('I am logged in as {string} with password {string}', (username, password) => {
   cy.visit("https://www.saucedemo.com/");
@@ -8,3 +8,7 @@ Given('I am logged in as {string} with password {string}', (username, password) 
   cy.get('[data-test="login-button"]').click();
   cy.url().should('include', 'inventory.html');
 });
+
+When('I click on the product {string}', (product) => {
+  cy.get('[data-test="inventory-item-name"]').contains(product).click();
+})
