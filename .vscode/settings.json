@@ -1,0 +1,33 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "launch": {
+        "configurations": [
+            {
+                "type": "node",
+                "request": "launch",
+                "name": "Launch Program",
+                "program": "${file}"
+            }
+        ],
+        "compounds": []
+    },
+    "git.autofetch": true,
+    "editor.tabCompletion": "on",
+    "workbench.editorAssociations": {
+        "*.docx": "default"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "editor.formatOnSave": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "cucumberautocomplete.steps": [
+        "cypress/support/step_definitions/**/*.js"
+    ],
+    
+    "cucumberautocomplete.customParameters": [
+
+    ],
+    "git.confirmSync": false
+    
+}
