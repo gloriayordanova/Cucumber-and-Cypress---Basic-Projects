@@ -12,3 +12,25 @@ When('I add inventory to my shopping cart', () => {
 When('I click on the Checkout button', () => {
     cy.get('[data-test="checkout"]').click();
 });
+
+When('I enter my First Name', () => {
+    cy.get('[data-test="firstName"]').type('Gloria')
+});
+
+When('I enter my Last Name', () => {
+    cy.get('[data-test="lastName"]').type('Yordanova')
+});
+
+When('I enter my Postal Code', () => {
+    cy.get('[data-test="postalCode"]').type('GL53 7EZ')
+});
+
+When('I click on the Continue button', () => {
+    cy.get('[data-test="continue"]').click()
+});
+
+When('I finalise my order', () => {
+    cy.get('[data-test="finish"]').click()
+});
+
+// Then('')
