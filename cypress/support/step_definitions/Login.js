@@ -21,3 +21,10 @@ Then('I should see the dashboard page', () => {
     cy.url().should('eq', `${url}inventory.html`);
 });
 
+When('I type a username {string}', (username) => {
+    cy.get('input[data-test="username"]').type(username);
+});
+
+Then('I should see the error message for password required', () => {
+    cy.get('.error-message-container').contains('Epic sadface: Password is required');
+});
