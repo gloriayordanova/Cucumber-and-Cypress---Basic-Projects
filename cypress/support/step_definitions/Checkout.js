@@ -33,4 +33,7 @@ When('I finalise my order', () => {
     cy.get('[data-test="finish"]').click()
 });
 
-// Then('')
+Then('I should be presented with a successful checkout message', () => {
+    cy.get('[data-test="complete-header"]').should('have.text', 'Thank you for your order!')
+    cy.get('[data-test="complete-text"]').contains('Your order has been dispatched, and will arrive just as fast as the pony can get there!')
+});

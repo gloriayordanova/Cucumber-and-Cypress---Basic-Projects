@@ -9,4 +9,4 @@ Feature: Checkout - SauceDemo
         And I enter my Postal Code
         And I click on the Continue button
         And I finalise my order
-# Then I should see a message saying "Thank you for your order! Your order has been dispatched, and will arrive just as fast as the pony can get there!"
+        Then I should be presented with a successful checkout message
