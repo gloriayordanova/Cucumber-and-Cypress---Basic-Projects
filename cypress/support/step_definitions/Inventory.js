@@ -25,3 +25,7 @@ When('I click on the shopping cart', () => {
 Then('I should see {string} in my shopping cart', (product) => {
   cy.get('[data-test="inventory-item"]').contains(product).should('be.visible');
 })
+
+Then('I should see an empty basket', () => {
+  cy.get('.cart_contents_container .cart_item').should('not.exist');
+})

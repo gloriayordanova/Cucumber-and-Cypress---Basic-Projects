@@ -8,3 +8,7 @@ Feature: Inventory - SauceDemo
         And I add it to my shopping cart
         And I click on the shopping cart
         Then I should see "Sauce Labs Backpack" in my shopping cart
+
+    Scenario: Inventory not added to my shopping cart
+        When I click on the shopping cart
+        Then I should see an empty basket
